@@ -3,18 +3,22 @@
 
 #define DATABASE_PATH "./database.dat"
 
-/* Program version */
+/* Constant with the program version */
 const char *argp_program_version = "0.1";
 
-/* Email addres in case of bugs */
+/* Email addres you can contact in case of bugs */
 const char *argp_program_bug_address = "eduardoquijano2@gmail.com";
 
 /* Program documentation */
-static char doc[] = ""; // TODO
+static char doc[] = "Toy program to handle brazilian ZIP code (CEP) storage like " 
+                    "a database (SGBD) in binary files"; // TODO
 
 /* Description of the parameter */
-static char args_doc[] = ""; // TODO
-
+static char args_doc[] =  "CEP [LONG] - A numéric representation of CEP (without dashes or spaces)\n"
+                         "\t" "Ex: 75800012\n"
+                         "DESCRIPTION [STRING] - A text (up to 255 characters long) for all CEP's"
+                         "text (street name and etc)"; // TODO
+int key, char *arg, struct argp_state *state
 /* Acceptable options */ 
 typedef enum  
 {
